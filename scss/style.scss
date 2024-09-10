@@ -1,3 +1,6 @@
+@import "config";
+@import "utilities";
+@import "btnConfig";
 
 * {
   box-sizing: border-box;
@@ -19,20 +22,85 @@ a {
   text-decoration: none;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: $primary-color;
+  color: white;
+  font-family: $font-stack;
+
+  .banner {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+
+    li {
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        background-color: $primary-color;
+
+        &:hover {
+          background-color: $light-color;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
 .hero {
-  // This is where the bulk of the SCSS styling needs to be done
+  font-family: $font-stack;
+  color: $secondary-color;
+  background-color: $primary-color;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-  // Take a look at the other files we've built already. How can they be useful here?
+  img {
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 1rem;
+  }
 
-  // Also, take time to review the features of SCSS we've already covered:
-  // 1. $variables
-  // 2. nesting (dont forget about the ampersand (&) parent selector!)
-  // 3. At-Rules
+  .hero-content {
+    max-width: 800px;
+
+    h1 {
+      font-size: 2.5rem;
+      color: $light-color;
+      margin: 0.5rem 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $light-color;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 // This code is related to some of the aspects of SCSS we have yet to cover.
 // While you don't have to mess with it, it would be advisable to attempt to understand its functionality.
-$spaceamounts: (1,2,3,4,5);
+$spaceamounts: (1, 2, 3, 4, 5);
 
 @each $space in $spaceamounts {
   .m-#{$space} {
