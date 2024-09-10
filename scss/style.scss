@@ -11,7 +11,7 @@
 body {
   background-color: $light-color;
   font-family: $font-stack;
-  line-height: 2;
+  line-height: 1;
 }
 
 img {
@@ -24,8 +24,8 @@ a {
 
 nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center; 
+  justify-content: space-between;
   padding: 1rem;
   background-color: $primary-color;
   color: white;
@@ -33,8 +33,8 @@ nav {
 
   .banner {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
     text-align: center;
+    flex: 1;
   }
 
   ul {
@@ -71,32 +71,36 @@ nav {
   a:hover {
     color: $secondary-color;
   }
+
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
   }
+
   li {
     padding: 20px;
   }
+
   &-content {
-    height: 75vh;
+    height: 83vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   img {
     width: 50%;
   }
 }
 
-// This code is related to some of the aspects of SCSS we have yet to cover.
-// While you don't have to mess with it, it would be advisable to attempt to understand its functionality.
+// SCSS for spacing utilities
 $spaceamounts: (1, 2, 3, 4, 5);
 
 @each $space in $spaceamounts {
