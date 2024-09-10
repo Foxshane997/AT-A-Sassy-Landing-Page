@@ -41,7 +41,7 @@
 body {
   background-color: #FFC300;
   font-family: Trebuchet MS, Arial, sans-serif;
-  line-height: 1;
+  line-height: 2;
 }
 
 img {
@@ -87,35 +87,36 @@ nav ul li a:hover {
 }
 
 .hero {
-  font-family: Trebuchet MS, Arial, sans-serif;
-  color: #a2d0fc;
   background-color: #000814;
-  padding: 2rem;
+  color: white;
+}
+.hero a {
+  color: white;
+}
+.hero a:hover {
+  color: #a2d0fc;
+}
+.hero nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+.hero ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+.hero li {
+  padding: 20px;
+}
+.hero-content {
+  height: 75vh;
+  display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 .hero img {
-  width: 800px;
-  height: 800px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-top: 1rem;
-}
-.hero .hero-content {
-  max-width: 800px;
-}
-.hero .hero-content h1 {
-  font-size: 2.5rem;
-  color: #FFC300;
-  margin: 0.5rem 0;
-}
-.hero .hero-content p {
-  font-size: 1rem;
-  color: #FFC300;
-  margin-bottom: 1rem;
+  width: 50%;
 }
 
 .m-1 {
